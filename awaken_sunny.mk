@@ -12,11 +12,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/sunny/device.mk)
 
 # Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+USE_PIXEL_CHARGER := true
+AWAKEN_BUILD_TYPE := unofficial
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := yaap_sunny
+PRODUCT_NAME := awaken_sunny
 PRODUCT_DEVICE := sunny
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2101K7AG
