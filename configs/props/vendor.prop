@@ -204,6 +204,10 @@ debug.media.codec2=2
 # QC framework value-adds
 ro.vendor.qti.va_aosp.support=1
 
+# Reduce boot time
+ro.config.hw_quickpoweron=true
+ro.config.hw_quickpoweron_init=true
+
 # Radio
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.data_ltd_sys_ind=1
