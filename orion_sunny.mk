@@ -11,12 +11,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sunny device
 $(call inherit-product, device/xiaomi/sunny/device.mk)
 
-# Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common OrionOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Device Config
+TARGET_ENABLE_BLUR := false
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_HAS_UDFPS := false
+
+# Maintainer 
+ORION_MAINTAINER := mnasibzade
+ORION_MAINTAINER_LINK := t.me/mnasibzade
+ORION_BUILD_TYPE := OFFICIAL
+
+# GApps
+ORION_GAPPS := true
+BUILD_GOOGLE_CONTACTS := true
+BUILD_GOOGLE_DIALER := true
+BUILD_GOOGLE_MESSAGE := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_sunny
+PRODUCT_NAME := lineage_sunny
 PRODUCT_DEVICE := sunny
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2101K7AG
