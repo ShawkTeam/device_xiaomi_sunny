@@ -101,6 +101,11 @@ PRODUCT_COPY_FILES += \
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Basic Call Recorder
+ifeq ($(TARGET_BUILD_PACKAGE),3)
+$(call inherit-product, vendor/bcr/bcr.mk)
+endif
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
